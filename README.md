@@ -1,6 +1,10 @@
 # cemc-product-kit
 
-CEMC/CMA NWP systems' production kit.
+Numerical weather prediction production kit for CEMC/CMA.
+
+Including:
+
+- CMA-GFS
 
 ## LICENSE
 

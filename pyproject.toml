@@ -7,7 +7,7 @@ name = "cemc-product-kit"
 authors = [
     {name = "perillaroc", email = "perillaroc@gmail.com"},
 ]
-description = "My package description"
+description = "NWP production kit for CEMC/CMA"
 readme = "README.md"
 requires-python = ">=3.8"
 keywords = ["cemc", "data"]
