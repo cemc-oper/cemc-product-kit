@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools", "versioneer[toml]", "tomli; python_version < '3.11'"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cemc-product-kit"
+authors = [
+    {name = "perillaroc", email = "perillaroc@gmail.com"},
+]
+description = "My package description"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["cemc", "data"]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "pyyaml",
+    "jinja2",
+    "numpy",
+    "pandas",
+    "xarray",
+    "eccodes",
+    "dask",
+    "click",
+    "tqdm",
+    "loguru",
+    "typer",
+]
+dynamic = ["version"]
+
+[tool.setuptools.packages]
+find = {}  # Scan the project directory with the default parameters
+
+[tool.versioneer]
