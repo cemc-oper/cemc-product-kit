@@ -4,9 +4,12 @@ import os
 import eccodes
 import xarray as xr
 import pandas as pd
-
 from dask.distributed import Client
-from loguru import logger
+
+from cemc_product_kit.logging import get_logger
+
+
+logger = get_logger()
 
 
 def extract_level(
