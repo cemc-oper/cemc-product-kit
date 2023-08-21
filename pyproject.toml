@@ -30,7 +30,11 @@ dependencies = [
 ]
 dynamic = ["version"]
 
+[project.urls]
+Homepage = "https://github.com/cemc-oper/cemc-product-kit"
+Repository = "https://github.com/cemc-oper/cemc-product-kit.git"
+
 [tool.setuptools.packages.find]
-where = ["sokort"]
+where = ["cemc_product_kit"]
 
 [tool.versioneer]
