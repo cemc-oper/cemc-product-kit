@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -13,7 +13,14 @@ requires-python = ">=3.8"
 keywords = ["cemc", "data"]
 license = {text = "Apache-2.0"}
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Development Status :: 3 - Alpha",
+
+    "Intended Audience :: Developers",
+
+    'License :: OSI Approved :: Apache Software License',
+
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
     "pyyaml",
@@ -35,6 +42,8 @@ Homepage = "https://github.com/cemc-oper/cemc-product-kit"
 Repository = "https://github.com/cemc-oper/cemc-product-kit.git"
 
 [tool.setuptools.packages.find]
-where = ["cemc_product_kit"]
+where = ["."]
+include = ["cemc_product_kit"]
 
-[tool.versioneer]
+[tool.setuptools_scm]
+version_file = "cemc_product_kit/_version.py"
