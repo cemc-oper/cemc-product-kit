@@ -61,6 +61,7 @@ def dask_v1(
         latitude: str = typer.Option(None),
         output_file_path: Optional[Path] = typer.Option(None),
         engine: str = "local",
+        n_workers: int = typer.Option(None),
 ):
     from reki.data_finder import find_local_file
     from cemc_product_kit.systems.cma_gfs.grib2_ne.task_dask_v1 import make_grib2_ne_by_dask_v1
@@ -91,7 +92,8 @@ def dask_v1(
         end_latitude=end_latitude,
         latitude_step=latitude_step,
         output_file_path=output_file_path,
-        engine=engine
+        engine=engine,
+        n_workers=n_workers,
     )
 
 

@@ -30,10 +30,13 @@ def make_grib2_ne_by_dask_v1(
         latitude_step: Optional[Union[float, int]],
         output_file_path: Union[Path, str],
         engine: str = "local",
+        n_workers: Optional[int] = None,
 ):
     logger.info(f"create dask client with engine {engine}...")
     if engine == "local":
         client_kwargs = dict(threads_per_worker=1)
+        if n_workers is not None:
+            client_kwargs["n_workers"] = n_workers
     else:
         client_kwargs = dict()
     client = create_dask_client(engine, client_kwargs=client_kwargs)
