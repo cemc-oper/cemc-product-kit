@@ -131,3 +131,5 @@ celerybeat.pid
 
 sample
 output
+
+cemc_product_kit/_version.py
