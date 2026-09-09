@@ -42,8 +42,11 @@ Homepage = "https://github.com/cemc-oper/cemc-product-kit"
 Repository = "https://github.com/cemc-oper/cemc-product-kit.git"
 
 [tool.setuptools.packages.find]
-where = ["."]
-include = ["cemc_product_kit"]
+where = ["src"]
+include = ["cemc_product_kit", "cemc_product_kit.*"]
+
+[tool.setuptools.package-dir]
+"" = "src"
 
 [tool.setuptools_scm]
-version_file = "cemc_product_kit/_version.py"
+version_file = "src/cemc_product_kit/_version.py"
